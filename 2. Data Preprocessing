@@ -1,0 +1,27 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+
+
+data = pd.read_csv('CSV 1.csv')
+
+data.dtypes                                       #KNOWING DATA TYPES OF EACH COLUMN
+
+data.apply(lambda x: sum(x.isnull()),axis=0)                    #This command should tell us the number of missing values in each column
+
+
+from sklearn.preprocessing import LabelEncoder, OneHotEncoder               #LABEL ENCODING CATEGORIAL DATA INTO NUMERICAL DATA
+labelencoder_X = LabelEncoder()
+
+var_mod = ['city','propertySubType','listingCategory','grade']
+for i in var_mod:
+    data[i]=labelencoder_X.fit_transform(data[i])
+    
+
+data['postalCode']=labelencoder_X.fit_transform(data['postalCode'])           #REPLACING NUN VALUES BY THERE MEAN
+data['livingArea'].fillna(data['livingArea'].mean(), inplace=True)
+data['yearBuilt'].fillna(data['yearBuilt'].mean(), inplace=True)
+data['lotSize'].fillna(data['lotSize'].mean(), inplace=True)
+data['numParkingSpaces'].fillna(data['numParkingSpaces'].mean(), inplace=True)
+
+data.to_csv("CSV 1 NEW.csv", index=False)                                     #WRITTING CLEANED DATA IN A NEW FILE
