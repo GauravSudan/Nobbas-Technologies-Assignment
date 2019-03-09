@@ -1,0 +1,36 @@
+The Result of XGBoost is as follows:
+
+-----------------------------------
+Model accuracy (%) = 93.88%
+Model Standard Deviation (%) =6.39%
+Mean Squared Error = 0.244
+------------------------------------
+
+
+The Result of LSTM is as follows:
+--------------------------------
+Training Loss : 0.39
+Training Accuracy (%)  : 60 %
+MSE : 0.54
+
+NOTE: The lower accuracy of LSTM is due to lack of enough quantity of training data
+--------------------------------
+
+
+The Result of NLP is as follows:
+--------------------------------
+Model accuracy (%) =  52.24439942547215
+Model Standard Deviation (%) = 3.92615370098544
+Mean Squared Error =  1.211111111111111
+
+Clasification report:
+              precision    recall  f1-score   support
+
+          0       0.45      0.39      0.42        56
+          1       0.63      0.61      0.62        62
+          2       0.44      0.50      0.47        62
+
+avg / total       0.51      0.51      0.51       180
+
+NOTE: The lower accuracy of NLP is due to lack of enough quantity of training data
+--------------------------------
