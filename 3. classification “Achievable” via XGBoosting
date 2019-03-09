@@ -1,3 +1,5 @@
+##########################################CODE####################################################
+
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -19,7 +21,7 @@ sc = StandardScaler()
 X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
 #######################################################################################
-
+#Model Selection
 from sklearn.ensemble import AdaBoostClassifier
 model = AdaBoostClassifier(random_state=1)
 model.fit(X_train, y_train)
@@ -54,3 +56,8 @@ print('Model Standard Deviation (%) =',accuracies.std()*100)
 print('Mean Squared Error = ',mean_squared_error(y_test, y_pred))
 print('---------------------------------------')
 
+--------------------------------------------------------------------RESULTS-------------------------------------------------
+----------------RESULTS----------------
+Model accuracy (%) = 93.88%
+Model Standard Deviation (%) =6.39%
+Mean Squared Error = 0.244
