@@ -9,42 +9,6 @@ The Numerical data has been trained using XGBoost and LSTM algorithms. In both t
 listPrice, livingArea, yearBuilt, lotSize, propSubType, listingCategory, numOfParking and NoOfPhotos have been used as INDEPENDENT VARIABLES
 to Train the model and Feature 'grade' has been used as DEPENDENT VARIABLE.
       
-The data has been cleaned and saved in "CSV 1 NEW" file.
-
-The Results of XGBoost and LSTM models are as Follows:
-
-----------------RESULTS of XGBoost--------------------------
-Model accuracy (%) = 93.88%
-Model Standard Deviation (%) =6.39%
-Mean Squared Error = 0.244
-------------------------------------------------------------
-------------------------------------RESULTS of LSTM------------------------------------------------
-Training Loss : 0.39
-Training Accuracy : 0.60
-MSE : 0.54
----------------------------------------------------------------------------------------------------
-
-
-
-The Categorial Data has been trained using NAtural Language Processing approach using Bag of Words Model. For this purpose, the feature 
-'listingDescription' has been used to train the model as INDEPENDENT VARIABLE and Feature 'grade' has been used as DEPENDENT VARIABLE. The result
-pf NLP model is as follows:
-
-----------------RESULTS----------------
-Model accuracy (%) =  52.24439942547215
-Model Standard Deviation (%) = 3.92615370098544
-Mean Squared Error =  1.211111111111111
-
-Clasification report:
-              precision    recall  f1-score   support
-
-          0       0.45      0.39      0.42        56
-          1       0.63      0.61      0.62        62
-          2       0.44      0.50      0.47        62
-
-avg / total       0.51      0.51      0.51       180
-_____________________________________________________
-
 
 #FUTURE WORK and AREA OF IMPROVEMENT
 
